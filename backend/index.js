@@ -50,15 +50,6 @@ app.use('/api/courses', (req, res, next) => {
   });
   
 // Routes
-app.get('/', (req, res) => {
-    console.log("hell from express")
-    res.send('Hello from Express!');
-});
-
-// Example API route
-app.get('/api/example', (req, res) => {
-    res.json({ message: 'This is an example API route' });
-});
 app.use('/api/users', userRoutes);
 app.use('/api/courses', courseRoutes);
 
