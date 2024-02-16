@@ -1,8 +1,7 @@
 function Courses() {
   return (
-    <div>
-      <h2>About Us</h2>
-      <p>Learn more about our company...</p>
+    <div className="main-courses">
+      <h1>Courses</h1>
     </div>
   );
 }
