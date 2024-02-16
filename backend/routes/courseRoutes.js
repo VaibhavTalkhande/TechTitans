@@ -11,8 +11,8 @@ router.put('/:id', courseController.updateCourse);
 router.delete('/:id', courseController.deleteCourse);
 
 // Content routes
-router.post('/courses/:courseId/content', upload.single('file'), courseController.uploadContent);
+router.post('/:courseId/content', upload.single('file'), courseController.uploadContent);
 
 // Quiz routes
-router.post('/courses/:courseId/quizzes', upload.single('image'), courseController.uploadQuiz);
+router.post('/:courseId/quizzes', upload.single('image'), courseController.uploadQuiz);
 module.exports = router;
