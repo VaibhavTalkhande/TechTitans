@@ -1,13 +1,13 @@
 import Navbar from "../Components/Navbar";
 import HeroSection from "../Components/HeroSection";
-import Courses from "./Courses";
+import ExploreCourses from "../Components/ExploreCourses";
 
 function Home() {
   return (
     <>
       <Navbar />
       <HeroSection />
-      <Courses />
+      <ExploreCourses />
     </>
   );
 }

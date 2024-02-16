@@ -1,9 +1,7 @@
-function Courses() {
-  return (
-    <div className="main-courses">
-      <h1>Courses</h1>
-    </div>
-  );
-}
+import React from "react";
+
+const Courses = () => {
+  return <div>Courses</div>;
+};
 
 export default Courses;
