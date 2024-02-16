@@ -39,10 +39,6 @@ function App() {
         <Route path="/contact" Component={Contact} />
         <Route path="/signup" Component={Signup} />
       </Routes>
-      <h1>{apiData}</h1>
-      <h1>{loading ? "Loading..." : ""}</h1>
-      <h1>Hello from React!</h1>
-      <h1> API Data: {apiData}</h1>
     </div>
   );
 }

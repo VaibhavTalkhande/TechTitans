@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-// import {
-//   FaFacebookSquare,
-//   FaInstagramSquare,
-//   FaYoutubeSquare,
-// } from "react-icons/fa";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import "../Styling/Navbar.css";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
@@ -12,20 +7,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
-  // const [loading, setLoading] = useState(false);
 
-  // const handleClick = async () => {
-  //   try {
-  //     setLoading(true);
-  //     // Make an HTTP POST request to the server
-  //     const response = await axios.post("/register");
-  //     console.log(response.data);
-  //   } catch (error) {
-  //     console.error("Error registering:", error);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
   return (
     <>
       <div className="header">
@@ -43,7 +25,7 @@ function Navbar() {
                 {/* <faHouseUser className="Home" /> */}
               </li>
               <li>
-                <NavLink to="/courses">Courses</NavLink>
+                <Link to="/courses">Courses</Link>
                 {/* <FaInstagramSquare className="instagram" /> */}
               </li>
               <li>
