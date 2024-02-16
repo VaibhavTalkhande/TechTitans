@@ -8,9 +8,21 @@ const bcrypt = require('bcryptjs');
 const pocess = require('dotenv');
 pocess.config();
 const secret = process.env.JWT_SECRET;
+const multer = require('multer');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+//muler
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'uploads/'); // Specify the directory where uploaded files will be stored
+    },
+    filename: function (req, file, cb) {
+      cb(null, file.originalname); // Use the original file name for the uploaded file
+    }
+  });
+  
+  const upload = multer({ storage: storage });
 // Middleware
 app.use(express.json());
 app.use(cors({

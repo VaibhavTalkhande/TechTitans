@@ -54,8 +54,34 @@ const userSchema = new mongoose.Schema({
     students: [{
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User'
+    }],
+    content: [{
+      chapter: {
+        type: String,
+        required: true
+      },
+      fileType: {
+        type: String,
+        required: true
+      },
+      fileUrl: {
+        type: String,
+        required: true
+      }
+    }],
+    quizzes: [{
+      question: {
+        type: String,
+        required: true
+      },
+      options: [String], // Array of strings representing options
+      correctAnswer: {
+        type: String,
+        required: true
+      }
     }]
   });
+
   
   // Create models from the schemas
   const User = mongoose.model('User', userSchema);
