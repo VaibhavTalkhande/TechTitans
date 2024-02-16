@@ -1,34 +1,33 @@
 .container {
   display: flex;
   flex-wrap: wrap;
+  padding: 2rem;
 }
 
 .Add-Course {
-  top: 10px;
+  position: relative;
+  top: 20px;
   margin-top: 20px;
   text-align: right;
   text-decoration: none;
-}
-
-.card {
-  margin-top: 1rem;
-  flex: 1 0 calc(33.333% - 20px); /* Three fractions with 20px spacing */
-  margin: 10px; /* Adjust the spacing as needed */
-  padding: 20px;
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-/* Adjust the flex-basis for the fourth card */
-.card:nth-child(4) {
-  flex-basis: calc(33.333% - 20px); /* Adjust to share space equally */
+  border: 2px solid black;
+  padding: 10px;
 }
 
 .card h2 {
   margin-top: 10px;
   font-size: 24px;
+}
+
+.card {
+  display: flex;
+  padding: 3rem;
+  border: 2px solid black;
+  gap: 2rem;
+  height: 280px;
+  max-width: 400px;
+  margin-left: 30px;
+  margin-top: 50px;
 }
 
 .card p {

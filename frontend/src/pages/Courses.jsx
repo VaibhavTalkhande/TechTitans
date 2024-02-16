@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 const Courses = () => {
   const [cards] = useState([
-    { title: "Card 1", description: "This is a sample card." },
-    { title: "Card 2", description: "This is another sample card." },
-    { title: "Card 3", description: "This is yet another sample card." },
-    { title: "Card 4", description: "This is one more sample card." },
+    { title: "Course 1", description: "This is a sample card." },
+    { title: "Course 2", description: "This is another sample card." },
+    { title: "Course 3", description: "This is yet another sample card." },
+    { title: "Course 4", description: "This is one more sample card." },
   ]);
   return (
     <>

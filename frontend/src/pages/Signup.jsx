@@ -9,7 +9,7 @@ const Signup = () => {
     username: "",
     email: "",
     password: "",
-    role: "student" // Default roll value
+    role: "student", // Default roll value
   });
 
   const handleChange = (e) => {
@@ -21,7 +21,10 @@ const Signup = () => {
     try {
       setLoading(true);
       // Make an HTTP POST request to the server
-      const response = await axios.post("http://localhost:5000/api/users/register", formData);
+      const response = await axios.post(
+        "https://techtitans-backend.onrender.com/api/users/register",
+        formData
+      );
       console.log(response.data);
       // Save JWT token to local storage
       setMessage(response.data.message);
@@ -32,7 +35,7 @@ const Signup = () => {
         window.location = "/";
       }
     } catch (error) {
-     console.error("Error registering:", error);
+      console.error("Error registering:", error);
     } finally {
       setLoading(false);
     }
@@ -44,33 +47,58 @@ const Signup = () => {
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="username">Username:</label>
-          <input type="text" id="username" name="username" value={formData.username} onChange={handleChange} />
+          <input
+            type="text"
+            id="username"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
+          />
         </div>
         <div>
           <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
         </div>
         <div>
           <label htmlFor="password">Password:</label>
-          <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+          />
         </div>
         <div>
           <div className="radio-btn">
-<<<<<<< HEAD
-            <label htmlFor="roll">Roll:</label>
-
-            <input type="radio" id="student" name="roll" value="student" />
-            <label htmlFor="student">Student</label>
-
-=======
             <label>Role:</label>
             <div>
-              <input type="radio" id="student" name="roll" value="student" checked={formData.roll === "student"} onChange={handleChange} />
+              <input
+                type="radio"
+                id="student"
+                name="roll"
+                value="student"
+                checked={formData.roll === "student"}
+                onChange={handleChange}
+              />
               <label htmlFor="student">Student</label>
             </div>
->>>>>>> 61d8297c93a9f08b56ce4cf9b8a95829cee49e3c
+
             <div className="radio-btn">
-              <input type="radio" id="teacher" name="roll" value="teacher" checked={formData.roll === "teacher"} onChange={handleChange} />
+              <input
+                type="radio"
+                id="teacher"
+                name="roll"
+                value="teacher"
+                checked={formData.roll === "teacher"}
+                onChange={handleChange}
+              />
               <label htmlFor="teacher">Teacher</label>
             </div>
           </div>
