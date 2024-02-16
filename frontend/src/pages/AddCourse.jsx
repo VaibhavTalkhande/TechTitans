@@ -9,14 +9,21 @@ const AddCourse = () => {
   const [content, setContent] = useState("");
   const [quizzes, setQuizzes] = useState("");
 
+  const decodeToken = (token) => {
+    try {
+      // Decode the JWT token
+      const decodedToken = jwt_decode(token);
+      return decodedToken;
+    } catch (error) {
+      console.error("Error decoding token:", error);
+      return null;
+    }
+  };
+
   useEffect(() => {
     // Fetch token and extract teacher ID from it
     const token = localStorage.getItem("token");
     // Assuming the token contains teacherId, you may need to adjust this part based on your authentication setup
-    if (token) {
-      const decodedToken = decodeToken(token);
-      setTeacherId(decodedToken.teacherId);
-    }
   }, []);
 
   const handleSubmit = async (event) => {

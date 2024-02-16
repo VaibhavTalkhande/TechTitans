@@ -2,6 +2,7 @@ import React from "react";
 // import img from "../assets/img.png";
 //import Heroimg from "../assets/img.gif";
 import "../Styling/HeroSection.css";
+import img from "../assets/img.gif";
 
 const HeroSection = () => {
   return (
@@ -18,7 +19,7 @@ const HeroSection = () => {
           </p>
           <button className="join-btn">Join for free</button>
         </div>
-        <img src="../assets/img.gif" alt="MyGIF" />
+        <img src={img} alt="MyGIF" />
         {/* <img src={img} alt="img" /> */}
       </div>
     </>
