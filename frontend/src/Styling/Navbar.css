@@ -12,9 +12,9 @@
   justify-content: space-between; */
 }
 
-.logo {
-  font-size: 1.2rem;
-  font-weight: 400;
+.logo h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 
 .main-nav {
@@ -52,7 +52,7 @@
   color: #000;
 }
 
-button {
+.sign-up {
   padding: 0.5rem 1.2rem;
   border: 1px solid #000;
   border-radius: 20px;
@@ -60,6 +60,8 @@ button {
   cursor: pointer;
   background-color: #fff;
   font-size: 1rem;
+  text-decoration: none;
+  color: #000;
 }
 
 .hamburger-menu {

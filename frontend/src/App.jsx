@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import axios from "axios";
 import "./App.css";
+import Signup from "./pages/Signup";
 
 function App() {
   const [message, setMessage] = useState("");
@@ -35,7 +36,8 @@ function App() {
         <Route exact path="/" Component={Home} />
         <Route path="/courses" Component={Courses} />
         <Route path="/contact" Component={Contact} />
-        <Route path="*" Component={NotFound} />
+        <Route path="/contact" Component={Contact} />
+        <Route path="/signup" Component={Signup} />
       </Routes>
       <h1>{apiData}</h1>
       <h1>{loading ? "Loading..." : ""}</h1>

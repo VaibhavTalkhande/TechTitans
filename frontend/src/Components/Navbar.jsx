@@ -7,16 +7,32 @@ import React, { useState } from "react";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../Styling/Navbar.css";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
+  // const [loading, setLoading] = useState(false);
+
+  // const handleClick = async () => {
+  //   try {
+  //     setLoading(true);
+  //     // Make an HTTP POST request to the server
+  //     const response = await axios.post("/register");
+  //     console.log(response.data);
+  //   } catch (error) {
+  //     console.error("Error registering:", error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
   return (
     <>
       <div className="header">
         {/* 1st div */}
         <nav className="main-nav">
           <div className="logo">
-            <h2>TechTitan</h2>
+            <h2>TechTitans</h2>
           </div>
 
           {/* 2nd menu part  */}
@@ -37,7 +53,9 @@ function Navbar() {
           </div>
 
           {/* 3rd Sign up */}
-          <button className="sign-up">Sign Up</button>
+          <Link className="sign-up" to="/signup">
+            Signup
+          </Link>
 
           {/* hamburget menu start  */}
           <div className="hamburger-menu">

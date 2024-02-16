@@ -1,0 +1,64 @@
+/* Styles for the sign-up container */
+.Sign-up {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Styles for the form header */
+.Sign-up h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Styles for form labels */
+.Sign-up label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Styles for form inputs */
+.Sign-up input[type="text"],
+.Sign-up input[type="email"],
+.Sign-up input[type="password"],
+.Sign-up input[type="radio"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+/* Styles for radio button container */
+.Sign-up .radio-btn {
+  margin-bottom: 15px;
+}
+
+/* Styles for radio button label */
+.Sign-up .radio-btn label {
+  margin-left: 5px;
+}
+
+/* Styles for submit button */
+.Sign-up .submit {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Hover effect for submit button */
+.Sign-up .submit:hover {
+  background-color: #0056b3;
+}
+
+.radio-btn {
+  display: block;
+}
