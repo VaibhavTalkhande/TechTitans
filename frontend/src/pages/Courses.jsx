@@ -12,15 +12,17 @@ const Courses = () => {
   ]);
   return (
     <>
-      <h1>Explore Courses</h1>
+      <h1 className="explore-heading">Explore Courses</h1>
       <Link to="/addcourse" className="Add-Course">
         Add Courses
       </Link>
       <div className="container">
         {cards.map((card, index) => (
           <div key={index} className="card">
-            <h2>{card.title}</h2>
-            <p>{card.description}</p>
+            <div>
+              <h2>{card.title}</h2>
+              <p>{card.description}</p>
+            </div>
           </div>
         ))}
       </div>

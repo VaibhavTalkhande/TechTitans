@@ -1,5 +1,6 @@
 import "../Styling/ExploreCourses.css";
 import { Link } from "react-router-dom";
+import Courseimg from "../assets/courses.png";
 
 function Courses() {
   return (
@@ -14,7 +15,7 @@ function Courses() {
             Explore All Courses
           </Link>
         </div>
-        <img src="../assets/courses.png" alt="" />
+        <img src={Courseimg} alt="" />
       </div>
     </>
   );

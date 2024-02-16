@@ -90,7 +90,9 @@ const AddCourse = () => {
             required
           />
         </div>
-        <button type="submit">Add Course</button>
+        <button type="submit" className="add-course-btn">
+          Add Course
+        </button>
       </form>
     </div>
   );
