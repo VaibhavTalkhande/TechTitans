@@ -1,29 +1,52 @@
-import { Component } from "react";
-import { faHouseUser } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from "react";
+// import {
+//   FaFacebookSquare,
+//   FaInstagramSquare,
+//   FaYoutubeSquare,
+// } from "react-icons/fa";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../Styling/Navbar.css";
+import { NavLink } from "react-router-dom";
 
-class Navbar extends Component {
-  state = { clicked: false };
-  handleClick = () => {
-    this.setState({ clicked: !this.state.clicked });
-  };
-  render() {
-    return (
-      <nav className="NavContent">
-        <h1 className="nav-logo">TechTitan.</h1>
+function Navbar() {
+  const [showMediaIcons, setShowMediaIcons] = useState(false);
+  return (
+    <>
+      <div className="header">
+        {/* 1st div */}
+        <nav className="main-nav">
+          <div className="logo">
+            <h2>TechTitan</h2>
+          </div>
 
-        <div className="menu-icons" onClick={this.handleClick}>
-          <i
-            className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
-          ></i>
-        </div>
-        {/* <FontawesomeIcon icon={faHouseUser} /> */}
+          {/* 2nd menu part  */}
+          <div className="menu">
+            <ul>
+              <li>
+                <NavLink to="/">Home</NavLink>
+                {/* <faHouseUser className="Home" /> */}
+              </li>
+              <li>
+                <NavLink to="/courses">Courses</NavLink>
+                {/* <FaInstagramSquare className="instagram" /> */}
+              </li>
+              <li>
+                <NavLink to="/contact">Contact</NavLink>
+              </li>
+            </ul>
+          </div>
 
-        <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
-          <button>Sign Up</button>
-        </ul>
-      </nav>
-    );
-  }
+          {/* 3rd Sign up */}
+          <button className="sign-up">Sign Up</button>
+
+          {/* hamburget menu start  */}
+          <div className="hamburger-menu">
+            <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}></a>
+          </div>
+        </nav>
+      </div>
+    </>
+  );
 }
 
 export default Navbar;
