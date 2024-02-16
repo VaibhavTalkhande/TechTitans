@@ -7,6 +7,7 @@ import NotFound from "./pages/NotFound";
 import axios from "axios";
 import "./App.css";
 import Signup from "./pages/Signup";
+import AddCourse from "./pages/AddCourse";
 
 function App() {
   const [message, setMessage] = useState("");
@@ -38,6 +39,7 @@ function App() {
         <Route path="/contact" Component={Contact} />
         <Route path="/contact" Component={Contact} />
         <Route path="/signup" Component={Signup} />
+        <Route path="/addcourse" Component={AddCourse} />
       </Routes>
     </div>
   );

@@ -1,38 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-.main-courses {
+.container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  height: 80vh;
+  flex-wrap: wrap;
 }
 
-img {
-  height: 400px;
-}
-
-.main-courses {
-  padding: 7rem;
-}
-
-.course-content {
-  padding: 7rem;
-}
-
-.explore-btn {
+.Add-Course {
+  top: 10px;
+  margin-top: 20px;
+  text-align: right;
   text-decoration: none;
-  border: 2px solid rgb(32, 32, 218);
-  padding: 10px 20px;
-  border-radius: 22px;
-  background-color: rgb(32, 32, 218);
-  color: white;
-  position: relative;
-  top: 3rem;
 }
 
-.course-heading {
-  position: relative;
-  left: 3rem;
-  font-weight: 500;
+.card {
+  margin-top: 1rem;
+  flex: 1 0 calc(33.333% - 20px); /* Three fractions with 20px spacing */
+  margin: 10px; /* Adjust the spacing as needed */
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Adjust the flex-basis for the fourth card */
+.card:nth-child(4) {
+  flex-basis: calc(33.333% - 20px); /* Adjust to share space equally */
+}
+
+.card h2 {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #555;
 }

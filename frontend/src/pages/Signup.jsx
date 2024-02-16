@@ -38,10 +38,10 @@ const Signup = () => {
         <div>
           <div className="radio-btn">
             <label htmlFor="roll">Roll:</label>
-            <div>
-              <input type="radio" id="student" name="roll" value="student" />
-              <label htmlFor="student">Student</label>
-            </div>
+
+            <input type="radio" id="student" name="roll" value="student" />
+            <label htmlFor="student">Student</label>
+
             <div className="radio-btn">
               <input type="radio" id="teacher" name="roll" value="teacher" />
               <label htmlFor="teacher">Teacher</label>

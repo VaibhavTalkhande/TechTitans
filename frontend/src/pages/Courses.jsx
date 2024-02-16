@@ -1,7 +1,31 @@
 import React from "react";
+import { useState } from "react";
+import "../Styling/Courses.css";
+import { Link } from "react-router-dom";
 
 const Courses = () => {
-  return <div>Courses</div>;
+  const [cards] = useState([
+    { title: "Card 1", description: "This is a sample card." },
+    { title: "Card 2", description: "This is another sample card." },
+    { title: "Card 3", description: "This is yet another sample card." },
+    { title: "Card 4", description: "This is one more sample card." },
+  ]);
+  return (
+    <>
+      <h1>Explore Courses</h1>
+      <Link to="/addcourse" className="Add-Course">
+        Add Courses
+      </Link>
+      <div className="container">
+        {cards.map((card, index) => (
+          <div key={index} className="card">
+            <h2>{card.title}</h2>
+            <p>{card.description}</p>
+          </div>
+        ))}
+      </div>
+    </>
+  );
 };
 
 export default Courses;
