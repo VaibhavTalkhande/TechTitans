@@ -1,11 +1,11 @@
-const { Course } = require('../model/database');
+const { Course,User } = require('../model/database');
 const multer = require('multer');
+
 // Controller functions for course operations
 exports.createCourse = async (req, res) => {
   try {
-    const teacher = req.user; // Assuming the authenticated user is the teacher
-
-    if (teacher.role !== 'teacher') {
+    const teacher = await User.findById(req.user.id);
+    if (teacher.role !== "teacher") {
       return res.status(403).json({ message: 'You are not authorized to create courses' });
     }
   }
@@ -52,7 +52,8 @@ exports.getCourseById = async (req, res) => {
 
 exports.updateCourse = async (req, res) => {
     try {
-        const teacher = req.user; // Assuming the authenticated user is the teacher
+        const teacher =  await User.findById(req.user.id);
+        
     
         if (teacher.role !== 'teacher') {
           return res.status(403).json({ message: 'You are not authorized to update courses' });
