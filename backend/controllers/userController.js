@@ -29,7 +29,7 @@ exports.register = async (req, res) => {
     const payload = { user: { id: user.id } };
     const token = jwt.sign(payload, secret, { expiresIn: '10h' });
 
-    res.json({ token });
+    res.json({ token }).status(200)
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
