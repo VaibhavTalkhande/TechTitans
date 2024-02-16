@@ -21,7 +21,7 @@ const Courses = () => {
           <div key={index} className="card">
             <div>
               <h2>{card.title}</h2>
-              <p>{card.description}</p>
+              <p className="course-des">{card.description}</p>
             </div>
           </div>
         ))}

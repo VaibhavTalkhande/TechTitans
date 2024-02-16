@@ -67,3 +67,9 @@
 .hamburger-menu {
   display: none;
 }
+
+.sign-up:hover {
+  transition: 0.3s;
+  color: #fff;
+  background-color: #000;
+}
